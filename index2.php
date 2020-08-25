@@ -128,12 +128,12 @@ $logClient = new LogAPI($apiKey, $apiSecret, $signatureKey);
 $logClient->authorization();
 
 $urlPath = "v1/aggregates/session_details";
-$urlParams = "?env=production&has_matching=1&date_format=iso&date_from=2020-08-19&date_to=2020-08-19&data_keys=SEARCH";
+$urlParams = "?env=production&has_matching=1&date_format=iso&date_from=2020-08-25&date_to=2020-08-25&data_keys=SEARCH";
 $allSessionsWithSearch = $logClient->getData($urlPath, $urlParams);
 
 
 $urlPath = "v1/events/user_questions";
-$urlParams = "?env=production&date_format=iso&date_from=2020-08-19&date_to=2020-08-19&length=1000";
+$urlParams = "?env=production&date_format=iso&date_from=2020-08-25&date_to=2020-08-25&length=1000";
 $allUserQuestions = $logClient->getData($urlPath, $urlParams);
 
 // Cruzar los datos entre LogID de $allSessionsWithSearch y $allUserQuestions
